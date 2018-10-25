@@ -18,12 +18,12 @@ namespace Microsoft.Examples
 
 
             // breaks:
-            //configuration.AddApiVersioning();
-            //var constraintResolver = new DefaultInlineConstraintResolver() { ConstraintMap = { ["apiVersion"] = typeof(ApiVersionRouteConstraint) } };
-            //configuration.MapHttpAttributeRoutes( constraintResolver );
+            configuration.AddApiVersioning();
+            var constraintResolver = new DefaultInlineConstraintResolver() { ConstraintMap = { ["apiVersion"] = typeof(ApiVersionRouteConstraint) } };
+            configuration.MapHttpAttributeRoutes(constraintResolver);
 
             // defaut (works)
-            configuration.MapHttpAttributeRoutes();
+            //configuration.MapHttpAttributeRoutes();
             builder.UseWebApi( httpServer );
         }
     }

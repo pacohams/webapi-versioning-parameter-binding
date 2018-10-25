@@ -6,11 +6,11 @@ namespace Microsoft.Examples.Controllers
     using System.Web.Http;
 
     // breaks
-    //[Microsoft.Web.Http.ApiVersion("1.0")]
-    //[RoutePrefix( "api/v{version:apiVersion}/helloworld" )]
+    [Microsoft.Web.Http.ApiVersion("1.0")]
+    [RoutePrefix( "api/v{version:apiVersion}/helloworld" )]
 
     // working
-    [RoutePrefix("api/v1/helloworld")]
+    //[RoutePrefix("api/v1/helloworld")]
     public class HelloWorldController : ApiController
     {
         [Route]
